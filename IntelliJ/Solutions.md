@@ -10,8 +10,9 @@
 	2- File
 	    Libraries
 	    +
+	   Et là ça devra apparaitre dans Module, vous cochez et vous l'avez.
 
-Et là ça devra apparaitre dans Module, vous cochez et vous l'avez.
+
 
 
 
