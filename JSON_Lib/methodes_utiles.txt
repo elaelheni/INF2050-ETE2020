@@ -6,7 +6,7 @@ JSONObject;
 # Méthodes utiles pour la création d'un json
 
 JSONArray.add(JSONObject objectJson); 
-JSONObject.put(String clef, String contenu);
+JSONObject.put(String clef, String valeur);
 
 
 # Méthodes utiles pour la lecture d'un json
