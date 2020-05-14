@@ -17,3 +17,7 @@ JSONObject object = (JSONObject) JSONSerializer.toJSON(String jsonText);
 JSONArray.get(int index);
 JSONOBject.getString(String clef);
 JSONArray array = (JSONArray) JSONObject.getJSONArray(String clef);
+
+
+RQ: Si le noeud JSON commence par "[" : On utilise getJSONArray()
+Si ça commence par "{" : On utilise getJSONObjet()
