@@ -1,0 +1,14 @@
+-Pour créer un dépôt sur git :
+
+1- Créer un répertoire qui va contenir mon dépôt : mkdir nom_du_rep
+2-Aller dans le répertoire : cd nom_du_rep && s'assurer de la bonne arborescence en créant mon nouveau projet sur IntelliJ (Créer mon nouveau projet dans nom_du_rep)
+3- git init
+4- Créer un dépôt sur github.com nom_du_depot_git
+5- Ajouter les classes dans le projet
+6- git add src ou git add NomClasse.java (tout dépendemment si on veut ajouter un seule fichier source au projet ou tous les fichiers sources du projet au dépôt)
+7- git commit -m "message pertinent" (le message pertinent facilite de retrouver le commit plus tard)
+8- git remote add origin "https://github.com/nomutilisateur/nom_du_depot_git" 
+9- git push -u origin master
+
+RQ: L'étape 8 on ne la fait qu'une seule fois, elle permet de relier le dépôt local au dépôt distant.
+L'étape 9 n'est faite qu'une seule fois aussi, ensuite on se contente de faire "git push" directement.
