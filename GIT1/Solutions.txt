@@ -5,40 +5,40 @@ git init
 vim readme.txt
 git add readme.txt
 git commit -m "readme contenant mon nom"
-git remote add origin "adresse de mon depot git"
+git remote add origin "URL"
 git push -u origin master
 
-2)
-git pull
-vim readme.txt
-git add readme.txt
-git commit -m "ajout du sigle du cours"
-git push
 
-3)
+2)
 cd ..
 rm rf nomDepotLocal
 git clone "adresse de mon depot git"
 
-4)
+3)
 git pull
 vim FizzBuzz.java
 javac FizzBuzz.java //pour compiler
 java FizzBuzz 15 //agrs[0]=15 || java FizzBuzz //sans arguments
 
-5)
+4)
 git pull
-vim .gitignore
+vim .gitignore (ajouter *.class dedans)
 git add .
-git commit -m "ajout du programme FizzBuzz"
+git commit -m "ajout de FizzBuzz"
 git push
 
-6)
-Remplacer 100 par 200 dans mon ancien programme
+5)
+Faire une modification dans le code
 git add .
-git commit -m "modification de ma borne superieure"
+git commit -m "modification"
 
- 
+10)
+modification dans le code
+git commit -a -m "introduction d'un bogue"
+git revert HEAD
+
+On aura le dernier commit du depot distant dans le depot local.
+
 RQ :
 Quelques commandes git utiles:
 
@@ -48,9 +48,6 @@ git commit -a = git add . + git commit . //Ajoute toutes mes modifications
 git commit --amend //permet de remplacer le message du dernier commit, ça marche ssi je
 n'ai pas encore push mes modifications
 
-git revert //ne supprime pas mon ancien commit et ne l'annule pas, mais ajoute un commit aui
+git revert //ne supprime pas mon ancien commit et ne l'annule pas, mais ajoute un commit qui
 supprime les modifications du commit précédent.
-
-
-
 
