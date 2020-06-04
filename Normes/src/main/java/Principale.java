@@ -18,7 +18,7 @@ public class Principale {
                 System.out.println("Verifiez vos path, le fichier que vous avez entré n'existe pas");
             }
         } else {
-            System.out.println("Veuillez entrez un fichier json en argument.");
+            System.out.println("Veuillez entrer un fichier json en argument.");
         }
     }
 }
