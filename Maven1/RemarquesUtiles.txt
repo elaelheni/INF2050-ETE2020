@@ -1,0 +1,37 @@
+RQ: Si le noeud JSON commence par "[" : On utilise getJSONArray()
+Si ça commence par "{" : On utilise getJSONObjet()
+
+
+*Maven:
+- Gérer les dépendances = gérer les .jar
+
+- Le fichier pom.xml doit contenir:
+    Le nom du programme
+    Comment je veux le packagé
+    Configurations supplémentaires
+    Spécifications des dépendances 
+
+RQ:
+Maven gère automatiquement les dépendances de nos dépendances.
+
+RQ:
+Certaines versions de librairies ne sont pas backword compatibles.
+
+
+*Logging:
+- Ça consiste à ajouter des traitements dans les applications pour permettre
+l'émission et le stockage de messages suite à des événements.
+
+- Utile pour tous les types d'applications en permettant par exemple de
+conserver une trace des exceptions qui sont levées dans dans l'application et
+des différents événements anormaux ou normaux liés à l'execution de
+l'application.
+
+- Ça permet de gérer des messages émis par une application durant son execution
+et permettre leur exploitation immédiate ou à posteriori. Ces messages sont
+d'ailleurs très utiles lors de la mise au point d'une apllication pour
+comprendre son fonctionnement ou résoudre une anomalie.
+
+
+RQ: posteriori != priori
+=> en s'appuyant sur l'experience, sur les faits constatés.
