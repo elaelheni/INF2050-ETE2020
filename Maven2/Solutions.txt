@@ -19,6 +19,12 @@ II\ Transition via ligne de commande:
 
 * Methode 2:
 	mvn archetype:generate -DgroupId=<groupID> -DartifactId=<artifactId> -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+	
+	RQ : On peut utiliser la commande mvn archetype:generate sans arguments
+	entrer les informations manuellement. Il est possible qu'on aie a créer
+	la structure manuellement (main/java et test/java) ou deplacer les
+	sources manuellement à l'interieeur de main/java
+
 	S'assurer d'inclure le code à l'intérieur de la structure (main+test)
 	Ajouter les dépendances nécessaires au POM (au minimum le maven compiler)
 	Tester avec mvn install/ mvn compiler
