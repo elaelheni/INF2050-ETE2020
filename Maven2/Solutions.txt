@@ -1,0 +1,42 @@
+I\ Transition via IntelliJ:
+
+	- Project tool -> Add Framework support
+	- Choisir Maven
+	- IntelliJ créera la structure de projet et le pom.xml
+	RQ: On aura peut etre besoin de forcer la structure avec "Mark director
+	as source/test root"
+	RQ: Noyau Linux: Spécifier groupID, artifactID et version dans le POM
+
+
+II\ Transition via ligne de commande:
+
+* Methode 1: 
+	mkdir -p main/java
+	mkdir -p test/java
+	vim|nano pom.xml
+	Personaliser le POM
+
+
+* Methode 2:
+	mvn archetype:generate -DgroupId=<groupID> -DartifactId=<artifactId> -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+	S'assurer d'inclure le code à l'intérieur de la structure (main+test)
+	Ajouter les dépendances nécessaires au POM (au minimum le maven compiler)
+	Tester avec mvn install/ mvn compiler
+
+
+
+
+RQ : Quelques commandes utiles:
+	mvn compile : pour compiler le code source
+	mvn install : installer les dépendances
+	mvn package : creer un jar executable (ça prend d'autres commandes en java)
+	mvn test : lancer les tests
+	mvn clean : clean the project (supprime /target)
+
+
+RQ :
+groupID :  une base unique pour le nom de l'organisation/ le nom du groupe
+artifactID : le nom du projet
+packaging : comment on compte packager le projet, Maven ne fait rien avec cette information
+version : la version du projet
+
