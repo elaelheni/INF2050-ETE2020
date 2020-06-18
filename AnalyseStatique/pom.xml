@@ -20,7 +20,18 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
         </plugins>
+
+
+
+
     </build>
 
 <!-- Dependance pour la Json Lib-->
@@ -46,7 +57,24 @@
             <version>1.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>3.1.0</version>
+            <type>maven-plugin</type>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.pmd</groupId>
+            <artifactId>pmd</artifactId>
+            <version>6.19.0</version>
+            <type>pom</type>
+        </dependency>
+
+
     </dependencies>
+
+
+
 
 
 </project>
