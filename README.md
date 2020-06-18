@@ -13,6 +13,9 @@ Correction des laboratoires d'INF2050 G20
 
 **Seance 6** : https://drive.google.com/file/d/1cD0SvxTeqaqUgJPUC1TJ-hdfK6eKex3b/view?usp=sharing 
 
+**Seance 7** : https://drive.google.com/file/d/1__kIYyLIkoVRnoRHyx6u9k_J3fufh9-y/view?usp=sharing
+
+
 ## Note pour le TP1 
 
 Je vous conseillerai de cloner les dépôts distants et de copier votre travail dedans avant de faire vos push.
