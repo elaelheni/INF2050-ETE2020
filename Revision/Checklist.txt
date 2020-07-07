@@ -1,0 +1,17 @@
+- Performance
+- Validité des résultats
+- Sécurité
+- Lisibilité
+- Gestion des erreurs : 
+	- Exceptions
+	- Codes de retour
+	- Erreurs systemes
+	- Erreurs de bases de donnees
+	- Erreurs de communication (web, réseau)
+	- Récuperation en cas d'erreur
+- Thread safety
+- Normes de codification
+- Convention de design
+- Qualité du design
+- Documentation
+

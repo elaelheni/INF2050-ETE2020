@@ -17,7 +17,7 @@ Exercices
    ceci, dressez une _checklist_ des éléments importants à réviser dans un tel
    code afin d'être certain de ne rien oublier.
 
-2. Révisez attentivement le code de la classe [MethodExample](src/main/java/MethodExample.java).
+2. Révisez attentivement le code de la classe [MethodExample](AvantRevision/MethodExample.java).
    Ce logiciel est un exercice de programmation visant à mettre en pratique les
    boucles et la validation des saisies au clavier. Dressez la liste des erreurs
    que vous avez détecté.
@@ -25,7 +25,7 @@ Exercices
 3. Suite à l'exercice #2, révisez votre _checklist_ et mettez-la à jour si vous
    avez oublié d'y inclure certains éléments.
 
-4. La classe [HILO](src/main/java/HILO.java) contient un programme répondant aux [exigences
+4. La classe [HILO](AvantRevision/HILO.java) contient un programme répondant aux [exigences
    suivantes](HILO.pdf). Révisez le code du programme et dressez la liste des
    erreurs que vous avez détecté.
 

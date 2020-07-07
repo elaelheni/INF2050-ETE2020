@@ -1,81 +1,145 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class MothodExample{
+public class MethodExample{
+    /**
+     *
+     * @param args
+     */
     public static void main(String args[]){
-        newDog();
+        veterinaire();
     }
 
-    public static void newDog(){
+    /**
+     *
+     */
+    public static void veterinaire(){
+
+
+        String nom = null;
+        String nomChien = null;
+        String race = null;
+        int age =0;
+
+        validationClavier(nom, nomChien, race);
+        validationAge(age);
+
+        Proprietaire.getProprietaire(nom);
+        Dog.getDog(nomChien,age,race);
+
+
+
+    }
+
+    /**
+     *
+     * @param nom
+     * @param nomChien
+     * @param race
+     */
+
+    public static void validationClavier(String nom,  String nomChien, String race){
         Scanner input = new Scanner(System.in);
-        boolean valide = true;
-        boolean valide2 = true;
+
+        do{
+            nom = nomProprietaire(input);
+            nomChien = nomChien(input);
+            race = race(input);
+
+        }while(validationCondition(nom, nomChien, race));
+    }
+
+    /**
+     *
+     * @param input
+     * @return
+     */
+
+    public static String nomProprietaire (Scanner input){
+
+        System.out.println("Entrez le nom du proprietaire:");
+        return input.nextLine().toLowerCase();
+    }
+
+    /**
+     *
+     * @param input
+     * @return
+     */
+
+    public static String nomChien (Scanner input){
+        System.out.println("Entrez le nom du chien:");
+        return input.nextLine().toLowerCase();
+
+    }
+
+    /**
+     *
+     * @param input
+     * @return
+     */
+
+    public static String race (Scanner input){
+        System.out.println("Entrez la race du chien:");
+        return input.nextLine().toLowerCase();
+    }
+
+    /**
+     *
+     * @param nom
+     * @param nomChien
+     * @param race
+     * @return
+     */
+
+    public static boolean validationCondition(String nom, String nomChien, String race){
+        return (nom.equals("\n")|| nomChien.equals("\n")||race.equals("\n"));
+    }
+
+    /**
+     *
+     * @param age
+     */
+
+    public static void validationAge(int age){
+        Scanner input = new Scanner(System.in);
         do {
-            System.out.println("Entrez le nom du proprietaire:");
-            String name = input.nextLine().toLowerCase();
-            System.out.println("Entrez le nom du chien:");
-            String dogName = input.nextLine().toLowerCase();
-            System.out.println("Entrez la race du chien:");
-            String race = input.nextLine().toLowerCase();
-            if (name == null || dogName == null || race == null) {
-                System.out.println("Error");
-                valide = false;
+            age = ageChien(input);
+        }while(intervalleAge(age));
 
-            } else {
-                Proprietaire prop = Proprietaire.getProprietaire(name);
-                Dog incompleteDog = Dog.getDog(dogName, race);
-                valide = true;
-                do {
-                    System.out.println("Entrez l'age du chien':");
-                    int dogAge = input.nextInt();
-                    if (dogAge < 0 || dogAge > 15) {
-                        System.out.println("Error");
-                        valide2=false;
-                    } else {
-                        Dog completeDog = Dog.getCompleteDog(dogName, dogAge, race);
-                        valide2 = true;
-                    }
-                }while(!valide2);
+    }
 
-            }
-        }while(!valide);
+    /**
+     *
+     * @param input
+     * @return
+     */
 
+    public static int ageChien (Scanner input){
+        int age =-1;
+        try  {
+            System.out.println("Entrez l'age du chien':");
+            age = input.nextInt();
+
+
+       }catch(InputMismatchException e){
+            System.out.println("Erreur, mauvais type!");
+            System.exit(0);
+
+        }
+
+        return age;
+    }
+
+    /**
+     *
+     * @param age
+     * @return
+     */
+
+    public static boolean intervalleAge (int age){
+        return (age<0 || age >15);
     }
 }
 
-class Dog {
-    String name;
-    int age;
-    String race;
 
-    public Dog(String name, int age, String race){
-        this.name = name;
-        this.age = age;
-        this.race = race;
-    }
-    public Dog(String name, String race){
-        this.name = name;
-        this.race = race;
-    }
-
-    public static Dog getDog(String name, String race){
-        return new Dog(name, race);
-    }
-
-    public static Dog getCompleteDog(String name, int age, String race){
-        return new Dog(name, age, race);
-    }
-
-}
-
-class Proprietaire{
-    String name;
-
-    public Proprietaire(String name){
-        this.name = name;
-    }
-
-    public static Proprietaire getProprietaire(String name){
-        return new Proprietaire(name);
-    }
-
-}
