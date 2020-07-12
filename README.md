@@ -19,3 +19,6 @@ Correction des laboratoires d'INF2050 G20
 
 
 **Seance 9** : https://drive.google.com/file/d/1Teq-jCz_vj8rfz1AlplFfnkBjyQqKjEv/view?usp=sharing
+
+
+**Seance 10** : https://drive.google.com/file/d/1PI25EO2LIvTf0pmhdKNcc8931HAKKM5d/view?usp=sharing
