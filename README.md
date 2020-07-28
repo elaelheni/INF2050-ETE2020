@@ -22,3 +22,5 @@ Correction des laboratoires d'INF2050 G20
 
 
 **Seance 10** : https://drive.google.com/file/d/1PI25EO2LIvTf0pmhdKNcc8931HAKKM5d/view?usp=sharing
+
+**Seance 11** : Probléme survenu lors de l'enregistrement, video deffectueuse.

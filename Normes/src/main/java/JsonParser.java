@@ -15,12 +15,12 @@ public class JsonParser {
 
     /*
      * */
-    private static void jsonToEmploye(JSONObject object, Employe employe) throws ParseException {
+    public static void jsonToEmploye(JSONObject object, Employe employe) throws ParseException {
         employe.setNom(object.getString("nom"));
         employe.setMatricule(object.getString("matricule"));
         JSONObject heuresObject = (JSONObject) object.get("heures");
-        employe.setHeuresReg((int) heuresObject.get("regulieres"));
-        employe.setHeuresMaj((int) heuresObject.get("majorees"));
+        employe.setHeuresReg(heuresObject.getInt("regulieres"));
+        employe.setHeuresMaj(heuresObject.getInt("majorees"));
         employe.setMois(object.getString("mois"));
     }
 }

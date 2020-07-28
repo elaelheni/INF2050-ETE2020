@@ -1,5 +1,9 @@
 public final class IdentifierTransformation {
-
+    /**
+     *
+     * @param identifier
+     * @return
+     */
     public static String snakeCaseIdentifierToPascalCase(String identifier) {
         char[] workString = snakeCaseIdentifierToCamelCase(identifier).toCharArray();
         if (workString.length > 0) {
@@ -8,20 +12,32 @@ public final class IdentifierTransformation {
         return new String(workString);
     }
 
+    /**
+     *
+     * @param identifier
+     * @return
+     */
     public static String snakeCaseIdentifierToCamelCase(String identifier) {
-        char[] workString = identifier.toLowerCase().toCharArray();
+        StringBuilder workString = new StringBuilder();
 
-        boolean firstCharacterMet = false;
-        for (int charIndex = 0; charIndex < workString.length; charIndex++) {
-            if (workString[charIndex] == '_' && firstCharacterMet) {
-                if (charIndex < workString.length - 1) {
-                    workString[charIndex + 1] = Character.toUpperCase(workString[charIndex + 1]);
+
+
+        for (int charIndex = 0; charIndex < identifier.length(); charIndex++) {
+
+            if (identifier.charAt(charIndex) == '_') {
+
+                if (charIndex != identifier.length() -1 && charIndex != 0) {
+
+                    workString.append(Character.toUpperCase(identifier.charAt(++charIndex)));
                 }
             } else {
-                firstCharacterMet = true;
+                workString.append(Character.toLowerCase(identifier.charAt(charIndex)));
             }
         }
 
-        return new String(workString).replace("_", "");
+        return workString.toString();
     }
+
 }
+
+
