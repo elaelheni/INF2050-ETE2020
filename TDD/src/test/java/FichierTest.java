@@ -18,4 +18,13 @@ class FichierTest {
     public void testExtension(){
         assertEquals("txt", Fichier.extension("/Users/ela/blabla/fichier.txt"));
   }
+  @Test
+    public void testExtension2(){
+      assertEquals("", Fichier.extension("/Users/ela/blabla/fichier"));
+  }
+
+  @Test
+    public void testAleatoire(){
+        assertTrue ( Fichier.aleatoire(8,5) >= 5 && Fichier.aleatoire(8,5) <= 8);
+  }
 }
